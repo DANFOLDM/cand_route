@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+#map-container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.sidebar label {
+    font-weight: bold;
+}
+.sidebar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.sidebar button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.sidebar button:hover {
+    background-color: #218838;
+}
+#map {
+    flex: 1;
+    height: 100%;
+}

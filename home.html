@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAND_ROUTE</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Hero Section with Image and Text -->
+    <main>
+        <div class="hero-section">
+            <div class="hero-overlay"></div> <!-- Dark overlay for better text visibility -->
+            <img src="Untitled design.png" alt="Green Getaways Background" class="hero-image">
+            <div class="hero-text">
+                <h1>NAVIGATE<br>BOLDLY</h1>
+                <div class="destination-buttons">
+                    <button class="destination-btn">
+                        <span class="icon">📍</span>
+                        LOCATE
+                        <span class="plan-text">.</span>
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="destination-btn">
+                        <span class="icon">📍</span>
+                        PASS
+                        <span class="plan-text">.</span>
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="destination-btn">
+                        <span class="icon">📍</span>
+                        ARRIVE
+                        <span class="plan-text">.</span>
+                        <span class="arrow">←</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="accessible-routes-section">
+        <h2 class="section-title">Explore Accessible Routes</h2>
+        <div class="route-container">
+            <!-- Card for Visual Impairment -->
+            <div class="route-card visual-impairment" onclick="openRoutePage('visual')">
+                <div class="route-image">
+                    <img src="shutterstock_792404329-704x470.jpg" alt="Visual Impairment Route">
+                </div>
+                <div class="route-content">
+                    <h3>For the Visually Impaired</h3>
+                    <p>Discover routes designed with tactile paths and audio guides for the visually impaired.</p>
+                </div>
+            </div>
+
+            <!-- Card for Mobility Impairment -->
+            <div class="route-card mobility-impairment" onclick="openRoutePage('mobility')">
+                <div class="route-image">
+                    <img src="istockphoto-153677073.jpg" alt="Mobility Impairment Route">
+                </div>
+                <div class="route-content">
+                    <h3>For Mobility Impairments</h3>
+                    <p>Find wheelchair-accessible routes with ramps and elevators designed for smooth travel.</p>
+                </div>
+            </div>
+
+            <!-- Card for Hearing Impairment -->
+            <div class="route-card hearing-impairment" onclick="openRoutePage('hearing')">
+                <div class="route-image">
+                    <img src="On+the+blog.jpg" alt="Hearing Impairment Route">
+                </div>
+                <div class="route-content">
+                    <h3>For the Hearing Impaired</h3>
+                    <p>Explore routes featuring visual notifications, vibrating alerts, and subtitled information.</p>
+                </div>
+            </div>
+
+            <!-- Card for Cognitive Disabilities -->
+            <div class="route-card cognitive-disability" onclick="openRoutePage('cognitive')">
+                <div class="route-image">
+                    <img src="cerebral-palsy-mental-impairment.jpg" alt="Cognitive Disability Route">
+                </div>
+                <div class="route-content">
+                    <h3>For Cognitive Disabilities</h3>
+                    <p>Find easy-to-navigate routes with clear, step-by-step instructions and simplified signage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--call centre section -->
+    <div class="wow-call-center-section">
+        <div class="wow-overlay">
+          <div class="wow-content animate-content">
+            <h1 class="wow-heading">NEED HELP ROUTING <br> Reach out </h1>
+            <ul class="wow-features">
+              <li><i class="fas fa-clock"></i> 24/7 Support</li>
+              <li><i class="fas fa-user-tie"></i> Expert Assistance</li>
+              <li><i class="fas fa-globe"></i> Global Coverage</li>
+            </ul>
+            <a href="#" class="wow-cta-button">Make call</a>
+          </div>
+        </div>
+      </div>
+      
+    
+    <!--footernot section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>CAND.IT</h2>
+                <p>Empowering Accessibility through Navigation</p>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <p>Email: <a href="DANFORDMO@MAIL.COM">DANFORDMOS@MAIL.COM</a></p>
+                <p>Phone: <a href="TEL:">+254798908146</a></p>
+            </div>
+            <div class="footer-socials">
+                <h3>FIND US</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-image">
+                <img src="Digital-map-image.jpg" alt="Map with Accessible Routes">
+            </div>
+            <p>&copy; 2024 CAND.IT. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+    function openRoutePage(routeType) {
+        // Define the URL mapping for each route type
+        const routePages = {
+            visual: 'maps.html',      // Update with your actual page for visual impairment
+            mobility: 'maps.html',  // Update with your actual page for mobility impairment
+            hearing: 'map.html',    // Update with your actual page for hearing impairment
+            cognitive: 'https://gspace.maps.arcgis.com/apps/mapviewer/index.html?webmap=0815ac67924b46208ebb880c1208538d' // Update with your actual page for cognitive disabilities
+        };
+
+        // Redirect to the corresponding page based on the clicked card
+        if (routePages[routeType]) {
+            window.location.href = routePages[routeType];
+        } else {
+            console.error('Route type not found:', routeType);
+        }
+    }
+    </script>
+
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="home.js"></script>
+</body>
+</html>
